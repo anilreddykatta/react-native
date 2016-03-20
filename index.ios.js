@@ -5,40 +5,43 @@
 'use strict';
 'use strict';
 
-var React = require('react-native');
+var React = require ( 'react-native' );
+var GLOBAL_SETTINGS = require ( './js/global' );
 
-var {
-    AppRegistry,
-    NavigatorIOS,
-    StyleSheet,
-} = React;
+var AppRegistry = React.AppRegistry;
+var NavigatorIOS = React.NavigatorIOS;
+var StyleSheet = React.StyleSheet;
+var AsyncStorage = React.AsyncStorage;
 
 
-import Camera from 'react-native-camera';
+var LoginScreen = require ( "./js/ios/LoginScreen" );
+var UserScreen = require ( './js/ios/UserScreen' );
 
-var LoginScreen = require("./LoginScreen");
+class ImagePOCProject extends React.Component {
+	constructor ( props ) {
+		super ( props )
+	}
 
-class ImagePOCProject extends React.Component{
-   render() {
-       return (
-         <NavigatorIOS
-             style={styles.container}
-             initialRoute={{
-                title: 'Login',
-                component: LoginScreen
+	render () {
+		return (
+			<NavigatorIOS
+				style={styles.container}
+				initialRoute={{
+                title: 'User Screen',
+                component: UserScreen
              }}
-         />
-       );
-   }
-};
+			/>
+		);
+	}
+}
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white'
-    }
-});
+const styles = StyleSheet.create ( {
+	container: {
+		flex: 1,
+		backgroundColor: 'white'
+	}
+} );
 
 //noinspection JSCheckFunctionSignatures
-AppRegistry.registerComponent('ImagePOCProject', ()=>ImagePOCProject);
+AppRegistry.registerComponent ( 'ImagePOCProject', ()=>ImagePOCProject );
 module.exports = ImagePOCProject;
