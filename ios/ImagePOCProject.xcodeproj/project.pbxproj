@@ -23,6 +23,9 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		5635DDFE6B754ED9B474BAB2 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA1A3A342BB4F1D9ADECF77 /* libRCTCamera.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		F81625761C9F31AF00794B8C /* libRNUploader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81625671C9F2A4B00794B8C /* libRNUploader.a */; };
+		F81625881C9F56A100794B8C /* libReactNativeIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81625871C9F569A00794B8C /* libReactNativeIcons.a */; };
+		F816258A1C9F56F100794B8C /* FontAwesomeKit in Resources */ = {isa = PBXBuildFile; fileRef = F81625891C9F56F100794B8C /* FontAwesomeKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,20 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		F81625661C9F2A4B00794B8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81625621C9F2A4B00794B8C /* RNUploader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNUploader;
+		};
+		F81625861C9F569A00794B8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81625821C9F569A00794B8C /* ReactNativeIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F5A3EB81ACDBF8000439386;
+			remoteInfo = ReactNativeIcons;
+		};
 		F8DA6EB41C8636790047236E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F03349FA6DD4776A2297560 /* RCTCamera.xcodeproj */;
@@ -136,6 +153,9 @@
 		7F03349FA6DD4776A2297560 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ACA1A3A342BB4F1D9ADECF77 /* libRCTCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTCamera.a; sourceTree = "<group>"; };
+		F81625621C9F2A4B00794B8C /* RNUploader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNUploader.xcodeproj; path = "../node_modules/react-native-uploader/RNUploader/RNUploader.xcodeproj"; sourceTree = "<group>"; };
+		F81625821C9F569A00794B8C /* ReactNativeIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeIcons.xcodeproj; path = "../node_modules/react-native-icons/ios/ReactNativeIcons.xcodeproj"; sourceTree = "<group>"; };
+		F81625891C9F56F100794B8C /* FontAwesomeKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FontAwesomeKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81625881C9F56A100794B8C /* libReactNativeIcons.a in Frameworks */,
+				F81625761C9F31AF00794B8C /* libRNUploader.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -273,6 +295,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F81625821C9F569A00794B8C /* ReactNativeIcons.xcodeproj */,
+				F81625621C9F2A4B00794B8C /* RNUploader.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -299,6 +323,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F81625891C9F56F100794B8C /* FontAwesomeKit */,
 				13B07FAE1A68108700A75B9A /* ImagePOCProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ImagePOCProjectTests */,
@@ -313,6 +338,22 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* ImagePOCProject.app */,
 				00E356EE1AD99517003FC87E /* ImagePOCProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81625631C9F2A4B00794B8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81625671C9F2A4B00794B8C /* libRNUploader.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81625831C9F569A00794B8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81625871C9F569A00794B8C /* libReactNativeIcons.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -439,6 +480,14 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = F81625831C9F569A00794B8C /* Products */;
+					ProjectRef = F81625821C9F569A00794B8C /* ReactNativeIcons.xcodeproj */;
+				},
+				{
+					ProductGroup = F81625631C9F2A4B00794B8C /* Products */;
+					ProjectRef = F81625621C9F2A4B00794B8C /* RNUploader.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -519,6 +568,20 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F81625671C9F2A4B00794B8C /* libRNUploader.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNUploader.a;
+			remoteRef = F81625661C9F2A4B00794B8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81625871C9F569A00794B8C /* libReactNativeIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeIcons.a;
+			remoteRef = F81625861C9F569A00794B8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F8DA6EB51C8636790047236E /* libRCTCamera.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -540,6 +603,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F816258A1C9F56F100794B8C /* FontAwesomeKit in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);

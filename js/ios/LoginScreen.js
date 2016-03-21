@@ -28,7 +28,7 @@ class LoginScreen extends React.Component {
 	}
 
 	componentDidMount () {
-		this._input.focus ();
+		//this.refs.username.focus();
 	}
 
 	render () {
@@ -39,7 +39,7 @@ class LoginScreen extends React.Component {
 					style={styles.username}
 					placeholder="username"
 					autoCorrect={false}
-					ref={(c) => this._input = c}
+					ref="username"
 					value={this.state.username}
 					onChangeText={this._usernameChanged.bind(this)}
 				/>
@@ -73,9 +73,10 @@ class LoginScreen extends React.Component {
 				password: this.state.password
 			} )
 		} )
-			.then ( ( response ) => {
-				if ( response.status == 'success' ) {
-					var userData = response.data;
+			.then((response) => response.json())
+			.then ( ( responseJson ) => {
+				if ( responseJson.status == 'success' ) {
+					var userData = responseJson.data;
 					AsyncStorage.setItem ( GLOBAL_SETTINGS.STRING_DEFINITION.AUTH_TOKEN, userData[ GLOBAL_SETTINGS.STRING_DEFINITION.TOKEN ], () => this.state.isLoggedIn = true, ( error ) => console.log ( error ) );
 					this._navigateToTheUserScreen ( userData );
 				} else {
@@ -113,10 +114,13 @@ class LoginScreen extends React.Component {
 	}
 
 	_navigateToTheUserScreen ( userObject, token ) {
-		this.props.navigator.push ( {
+		this.props.navigator.replace ( {
 			title: userObject.username,
 			component: UserScreen,
-			passProps: { user: userObject }
+			passProps: { user: userObject },
+			leftButtonTitle: '',
+			rightButtonTitle: '➕',
+			onRightButtonPress: () => {}
 		} );
 	}
 

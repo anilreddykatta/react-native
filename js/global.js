@@ -5,7 +5,7 @@
 var GlobalSettings = {
 	'API': {
 		'API_TOKEN': '',
-		'API_ENDPOINT': 'http://localhost:3000'
+		'API_ENDPOINT': 'http://192.168.1.6:3000'
 	},
 	STRING_DEFINITION: {
 		'TOKEN': 'token',

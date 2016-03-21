@@ -27,8 +27,8 @@ class ImagePOCProject extends React.Component {
 			<NavigatorIOS
 				style={styles.container}
 				initialRoute={{
-                title: 'User Screen',
-                component: UserScreen
+                title: 'Login',
+                component: LoginScreen
              }}
 			/>
 		);
